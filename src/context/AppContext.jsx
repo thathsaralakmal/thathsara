@@ -17,6 +17,7 @@ const currency  = import.meta.VITE_CURRENCY;
                   const [products, setProducts] = useState([])
 
                   const [cartItems, setCartItems] = useState({})
+                  const [searchQuery, setSearchQuery] = useState({})
 // fetch All products
             const fetchProducts =async()=>{
                setProducts(dummyProducts)
@@ -62,14 +63,17 @@ useEffect(()=>{
     fetchProducts()
 },[])
 
-                  const value ={navigate, user, setUser, setIsSeller, isSeller, showUserLogin, setShowUserLogin,products ,currency,addToCart,updateCartItem,removeFromCart,cartItems
+                  const value ={navigate, user, setUser, setIsSeller, isSeller,
+                     showUserLogin, setShowUserLogin,products ,currency,
+                     addToCart, updateCartItem, removeFromCart, cartItems,
+                     searchQuery, setSearchQuery
                 }
 
             return <AppContext.Provider value={value}>
                 {children}
             </AppContext.Provider>
 
-};
+}
 
 
  export const useAppContext = () => {
