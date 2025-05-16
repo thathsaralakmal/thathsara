@@ -20,12 +20,13 @@ xl:grid-cols-7 mt-6 gap-6'>
 justify-center items-center'
 style={{backgroundColor: category.bgColor}}
 onClick={()=>{
-    navigate('/products/${category.path.toLowerCase()}')
-    scrollTo (0,0)
+  navigate(`/products/${category.path.toLowerCase()}`)
+
+    scrollTo(0,0)
 }}
 >
 
-      <img src ={category.image} alt="" className='group-hover:scale-108 transition
+      <img src ={category.image} alt="category.text" className='group-hover:scale-108 transition
       max-w-28' />
       <p className='text-sm font-medium'>{category.text}</p>
 </div>
